@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1> Welcome to Soundslice</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#convert">Convert</a></li>
+                <li><a href="#output">Output</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <section>
+            <h2>About Soundslice</h2>
+            <p>Soundslice is a platform that converts your ASCII into readable sheet music.</p>
+        </section>
+
+        <form action="convert" method="POST">
+            <textarea name="ascii" rows="10" cols="30" placeholder="Enter ASCII text here..."></textarea>
+            <button type="submit">Convert</button>
+        </form>
+
+        <form action="output">
+            <textarea name="output" id="output" rows="10" cols="30" placeholder="Converted sheet music"></textarea>
+            <iframe src="" frameborder="0"></iframe>
+        </form>
+
+        <footer>
+            <p>&copy; 2025 Soundslice</p>
+        </footer>
+    </main>
+</body>
+
+</html>
