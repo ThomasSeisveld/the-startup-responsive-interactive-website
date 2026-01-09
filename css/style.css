@@ -13,12 +13,12 @@ a {
 
 h1 {
     font-size: 52px;
-    color: rgb(67, 68, 78);
+    color: var(--primary-text-color);
 }
 
 p {
     font-size: 20px;
-    color: rgb(67, 68, 78);
+    color: var(--primary-text-color);
 }
 
 

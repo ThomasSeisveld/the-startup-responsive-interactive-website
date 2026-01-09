@@ -64,7 +64,7 @@
 } */
 
 :root {
-    --color-primary: #f2725f;
-    --color-secondary: #43444e;
-    --color-active: rgb(240.0838150289,93.2167630058,71.4161849711);
+    --primary-color: #f2725f;
+    --primary-text-color: #43444e;
+    --active-color: rgb(240.0838150289,93.2167630058,71.4161849711);
 }
