@@ -23,19 +23,21 @@
     <main>
 
         <section class="hero">
-            <h2 class="hero-title">Convert your ASCII</h2>
+            <h1 class="hero-title">Convert your ASCII</h2>
             <p class="hero-text">Soundslice is a platform that converts your ASCII into readable sheet music.</p>
         </section>
 
         <form action="convert" method="POST">
+            <label for="ascii">ASCII Input:</label>
             <textarea name="ascii" rows="10" cols="30" placeholder="Enter ASCII text here..."></textarea>
             <button type="submit">Convert</button>
         </form>
 
-        <form action="output">
+        <output action="output">
+            <label for="output">Output:</label>
             <textarea name="output" id="output" rows="10" cols="30" placeholder="Converted sheet music"></textarea>
             <iframe src="" frameborder="0"></iframe>
-        </form>
+        </output>
 
         <footer>
             <p>&copy; 2025 Soundslice</p>

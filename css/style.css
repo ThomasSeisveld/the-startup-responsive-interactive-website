@@ -57,6 +57,26 @@ a {
     cursor: pointer;
 }
 
+h1{
+    font-size: 52px;
+    color: rgb(67, 68, 78);
+}
+p {
+    font-size: 20px;
+    color: rgb(67, 68, 78);
+}
+button{
+    border-radius: 4px;
+    font: bold 14px / 16px "proxima-nova", helvetica, arial, sans-serif;
+    outline: none;
+    cursor: pointer;
+    background: #f2725f;
+    color: #fff;
+    border: 0;
+    padding: 8px 12px;
+    white-space: nowrap;
+}
+
 .main-header {
     padding: 12px 16px;
 }
@@ -85,6 +105,6 @@ a {
 
 
 .hero {
-    padding-top: 50px;
-    padding-bottom: 40px;
+    padding: 50px;
+    text-align: center;
 }
