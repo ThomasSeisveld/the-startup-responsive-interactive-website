@@ -64,7 +64,6 @@ button {
     border-bottom: 1px solid #ddd;
 }
 
-
 .main-nav-mobile {
     display: flex;
     justify-content: space-between;
@@ -83,6 +82,16 @@ button {
         }
     }
 
+    button {
+        cursor: pointer;
+        user-select: none;
+        white-space: nowrap;
+        border: none;
+        outline: none;
+        color: inherit;
+        background: none;
+    }
+
     .header-logo {
         display: flex;
         align-items: center;
@@ -98,6 +107,58 @@ button {
     @media (min-width: 500px) {
         display: none;
     }
+}
+
+.container {
+   position: absolute;
+   right: 0;
+   background-color: #ffffff;
+
+   @media (min-width: 500px) {
+        display: none;
+    }
+}
+
+.wrapper {
+    padding: 20px;
+
+
+
+
+   .dropdown-menu {
+      border-radius: 0.25rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease;
+   }
+   
+
+   .dropdown-item {
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.5;
+      padding-block: 0.75rem;
+      padding-inline: 1.5rem;
+      transition: all 0.2s ease;
+
+      &:hover {
+         background-color: var(--color-dark-200);
+      }
+   }
+
+   &.is-active &-menu {
+      opacity: 1;
+      transform: scaleY(1);
+   }
+}
+
+.dropdown {
+   position: relative;
+   padding-inline: 1.5rem;
+   padding-block: 0.75rem;
+   border-radius: 0.25rem;
+   transition: all 0.2s ease;
+
 }
 
 .main-nav-desktop {

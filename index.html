@@ -12,22 +12,85 @@
 <body>
     <header class="main-header">
         <nav class="main-nav-mobile">
-              <ul class="header-first">
+            <ul class="header-first">
                 <div class="header-logo">
                     <li><img src="assets/svg/square-light-11852e267c30000bf63ef60def1fef5e.svg" width="25px"></li>
-                    <li><p>SOUNDSLICE</p></li>
+                    <li>
+                        <p>SOUNDSLICE</p>
+                    </li>
                 </div>
             </ul>
 
             <ul class="header-second">
-                <li><img src="assets/svg/hamburger.svg" width="25px"></li>
+                <li>
+                    <button role="button" class="dropdown">
+                        <img src="assets/svg/hamburger.svg" width="25px">
+                    </button>
+                </li>
             </ul>
         </nav>
+         <section class="container">
+            <div class="wrapper">
+            <ul class="dropdown-menu">
+                <li class="dropdown-item">
+                    <a href="/login/" class="main-nav-item">Inloggen</a>
+                </li>
+                <li>
+                    <hr class="divider divider-20">
+                </li>
+
+                <li class="dropdown-item">
+                    <a href="/features/" class="main-nav-item">The player</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="/notation-editor/" class="main-nav-item">Notation/tab editor</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="/sheet-music-scanner/" class="main-nav-item">
+                        Sheet music scanner
+                    </a>
+                </li>
+                <li>
+                    <hr class="divider divider-20">
+                </li>
+                <li class="dropdown-item">
+                    <a href="/music-practice/" class="main-nav-item">Practice</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="/licensing/" class="main-nav-item">Embedding</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="/teachers/" class="main-nav-item">Teaching</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="/transcribe/" class="main-nav-item">Transcribing</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="/plans/" class="main-nav-item">Plans</a>
+                </li>
+                <li>
+                    <hr class="divider divider-20">
+                </li>
+                <li class="dropdown-item">
+                    <a href="/blog/" class="main-nav-item">Product updates</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="/help/" class="main-nav-item">Help center</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="/about/" class="main-nav-item">Over</a>
+                </li>
+            </ul>
+            </div>
+        </section>
+       
         <nav class="main-nav-desktop">
             <ul class="header-first">
-               <div class="header-logo">
+                <div class="header-logo">
                     <li><img src="assets/svg/square-light-11852e267c30000bf63ef60def1fef5e.svg" width="25px"></li>
-                    <li><p>SOUNDSLICE</p></li>
+                    <li>
+                        <p>SOUNDSLICE</p>
+                    </li>
                 </div>
             </ul>
 
@@ -37,7 +100,7 @@
             </ul>
         </nav>
     </header>
-        
+
     <main>
 
         <section class="hero">
@@ -62,5 +125,5 @@
         </footer>
     </main>
 </body>
-
+<script src="scripts/script.js"></script>
 </html>
