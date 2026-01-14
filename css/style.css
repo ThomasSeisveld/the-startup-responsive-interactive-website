@@ -54,7 +54,7 @@ button {
     outline: none;
     cursor: pointer;
     background: #f2725f;
-    color: #fff;
+    color: var(--default-white);
     border: 0;
     padding: 8px 12px;
     white-space: nowrap;
@@ -69,8 +69,7 @@ button {
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 0;
 
     ul {
         display: flex;
