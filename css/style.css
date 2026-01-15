@@ -61,6 +61,7 @@ button {
 }
 
 .main-header {
+    height: 3rem;
     border-bottom: 1px solid #ddd;
 }
 
@@ -69,7 +70,8 @@ button {
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
-    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
     ul {
         display: flex;
@@ -168,7 +170,22 @@ button {
     padding-block: 0.75rem;
     border-radius: 0.25rem;
     transition: all 0.2s ease;
+    display: flex;
+    padding: 6px;
+    color: #43444e;
+    color: var(--v-foreground-color)
 }
+
+.dropdown svg {
+    transition: stroke 0.18s ease, opacity 0.18s ease;
+    width: 25px;
+    height: 25px;
+}
+
+.dropdown.is-active {
+    color: var(--primary-color);
+}
+
 
 .wrapper .dropdown-menu {
     border-radius: 0 0 0 0.25rem;
