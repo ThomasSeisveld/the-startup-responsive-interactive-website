@@ -142,58 +142,67 @@ button {
     }
 }
 
-.container {
-   position: absolute;
-   right: 0;
+.hero {
+    padding: min(5em, 8%);
+    text-align: center;
+}
 
-   @media (min-width: 500px) {
+.dropdown {
+    position: relative;
+    padding-inline: 1.5rem;
+    padding-block: 0.75rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s ease;
+}
+
+.wrapper .dropdown-menu {
+    border-radius: 0 0 0 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    transition: all 0.18s ease;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    pointer-events: none;
+    margin: 0.25rem 0 0 0;
+    background-color: var(--default-white);
+    min-width: 200px;
+    overflow: hidden;
+}
+
+.wrapper.is-active .dropdown-menu {
+    opacity: 1;
+    z-index: 10;
+    transform: scaleY(1);
+    pointer-events: auto;
+}
+
+.wrapper .dropdown-item {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--primary-text-color);
+    padding-block: 0.75rem;
+    padding-inline: 1.5rem;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.wrapper .dropdown-item:hover {
+    color: var(--primary-color);
+}
+
+.dropdown:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.container {
+    position: relative;
+    
+    @media (min-width: 500px) {
         display: none;
     }
 }
 
-.wrapper {
-   .dropdown-menu {
-      border-radius: 0 0 0 0.25rem;
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-      transition: all 0.2s ease;
-      opacity: 0;
-      transform: scaleY(0);
-      transform-origin: top;
-      pointer-events: none;
-   }
-
-   .dropdown-item {
-      font-family: inherit;
-      font-size: 1rem;
-      font-weight: 500;
-      line-height: 1.5;
-      padding-block: 0.75rem;
-      padding-inline: 1.5rem;
-      transition: all 0.2s ease-in-out;
-
-      &:hover {
-         background-color: gray;
-      }
-   }
-
-   &.is-active .dropdown-menu {
-      opacity: 1;
-      z-index: 10;
-      background-color: var(--default-white);
-      transform: scaleY(1);
-   }
-}
-
-.dropdown {
-   position: relative;
-   padding-inline: 1.5rem;
-   padding-block: 0.75rem;
-   border-radius: 0.25rem;
-   transition: all 0.2s ease;
-
-}
-
-.hero {
-    padding: min(5em, 8%);
-    text-align: center;
+.container .wrapper {
+    position: absolute;
+    right: 0;
 }
