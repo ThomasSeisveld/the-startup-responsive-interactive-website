@@ -169,7 +169,7 @@ button {
     padding-inline: 1.5rem;
     padding-block: 0.75rem;
     border-radius: 0.25rem;
-    transition: all 0.2s ease;
+    transition: all 0.2s ease allow-discrete;
     display: flex;
     padding: 6px;
     color: #43444e;
@@ -213,6 +213,25 @@ button {
     color: var(--primary-text-color);
     padding-block: 0.75rem;
     padding-inline: 1.5rem;
+    opacity: 0;
+    transition: all 0.15s ease-in-out, color 0.15s ease-in-out;
+    animation: flowin 0.3s ease-out forwards;
+
+    &:nth-of-type(1){
+        animation-delay: 0.1s;
+    }
+    &:nth-of-type(2){
+        animation-delay: 0.2s;
+    }
+    &:nth-of-type(3){
+        animation-delay: 0.3s;
+    }
+    &:nth-of-type(4){
+        animation-delay: 0.4s;
+    }
+    &:nth-of-type(5){
+        animation-delay: 0.5s;
+    }
     
 }
 
@@ -239,4 +258,17 @@ button {
     @media (min-width: 400px) {
         position: absolute;
     }
+}
+
+@keyframes flowin {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+       
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
 }
