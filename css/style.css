@@ -194,7 +194,6 @@ button {
     opacity: 0;
     transform: scaleY(0);
     transform-origin: top;
-    pointer-events: none;
     margin: 0.25rem 0 0 0;
     background-color: var(--default-white);
     min-width: 200px;
@@ -205,7 +204,6 @@ button {
     opacity: 1;
     z-index: 10;
     transform: scaleY(1);
-    pointer-events: auto;
 }
 
 .wrapper .dropdown-item {
@@ -215,7 +213,7 @@ button {
     color: var(--primary-text-color);
     padding-block: 0.75rem;
     padding-inline: 1.5rem;
-    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    
 }
 
 .wrapper .dropdown-item:hover {
@@ -235,6 +233,10 @@ button {
 }
 
 .container .wrapper {
-    position: absolute;
+    position: relative;
     right: 0;
+
+    @media (min-width: 400px) {
+        position: absolute;
+    }
 }
