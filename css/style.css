@@ -232,6 +232,21 @@ button {
     &:nth-of-type(5){
         animation-delay: 0.5s;
     }
+    &:nth-of-type(6){
+        animation-delay: 0.1s;
+    }
+    &:nth-of-type(7){
+        animation-delay: 0.2s;
+    }
+    &:nth-of-type(8){
+        animation-delay: 0.3s;
+    }
+    &:nth-of-type(9){
+        animation-delay: 0.4s;
+    }
+    &:nth-of-type(10){
+        animation-delay: 0.5s;
+    }
     
 }
 .dropdown-item a{
