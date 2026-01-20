@@ -43,6 +43,7 @@ function updateFontSize() {
    textarea.style.setProperty('--dynamic-font-size', size + 'px');
 }
 
+
 textarea.addEventListener("input", function () {
    let textLength = textarea.value.length;
    result.textContent = textLength + "/" + limit;
@@ -62,13 +63,14 @@ textarea.addEventListener("input", function () {
    }
 });
 
-window.addEventListener("resize", updateFontSize);
-
-
-asciiForm.addEventListener("submit", (e) => {
+convertButton.addEventListener("click", function(e) {
    e.preventDefault();
    convertASCII();
 });
+
+
+
+window.addEventListener("resize", updateFontSize);
 
 function convertASCII() {
    const tabInput = asciiInput.value.trim();

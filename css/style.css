@@ -94,6 +94,22 @@ button {
 }
 }
 
+.save-button {
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 4px;
+    align-self: flex-start;
+    border: 1px solid var(--primary-color);
+    transition: all 0.3s ease;
+
+    &:hover {
+    background: var(--default-white);
+    box-shadow: 0 4px 12px var(--v-box-shadow-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+}
+
 
 
 .convert-button:active {
@@ -343,10 +359,18 @@ textarea {
     font-family: 'Courier New', monospace;
     border: 2px solid var(--v-border-color-dark);
     border-radius: 6px;
-    transition: border-color 0.3s ease, font-size 0.12s ease;
+    transition: border-color 0.5s ease, font-size 0.12s ease;
     resize: none;
     width: 90%;
     height: 200px;
+}
+
+input[type="text"] {
+    padding: 10px 15px;
+    border: 2px solid var(--v-border-color-dark);
+    border-radius: 6px;
+    transition: border-color 0.5s ease;
+    width: 90%;
 }
 
 .input-group textarea:focus {
@@ -354,11 +378,16 @@ textarea {
     border-color: var(--primary-color);
 }
 
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
 
 
 .output-group {
     display: flex;
     flex-direction: column;
+    gap: 15px;
     margin-bottom: 0;
     border: none;
     width: 100%;
@@ -370,7 +399,6 @@ textarea {
     font-weight: 600;
     color: var(--primary-text-color);
     display: block;
-    margin-bottom: 15px;
 }
 
 .output-display {
