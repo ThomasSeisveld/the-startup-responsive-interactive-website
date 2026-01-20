@@ -186,6 +186,7 @@ button {
 .hero {
     padding: min(5em, 8%);
     text-align: center;
+    
 }
 
 .dropdown {
@@ -196,8 +197,8 @@ button {
     transition: all 0.2s ease allow-discrete;
     display: flex;
     padding: 6px;
-    color: #43444e;
-    color: var(--v-foreground-color)
+    color: var(--v-foreground-color);
+    
 }
 
 .dropdown svg {
@@ -222,12 +223,19 @@ button {
     background-color: var(--default-white);
     min-width: 200px;
     overflow: hidden;
+    display: none;
 }
 
 .wrapper.is-active .dropdown-menu {
     opacity: 1;
     z-index: 10;
     transform: scaleY(1);
+    display: block;
+
+    .divider {
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        animation: flowin 0.4s ease-out forwards;
+    }
 }
 
 .wrapper .dropdown-item {
@@ -237,50 +245,7 @@ button {
     color: var(--primary-text-color);
     padding-block: 0.75rem;
     padding-inline: 1.5rem;
-    opacity: 0;
-    transition: all 0.15s ease-in-out, color 0.15s ease-in-out;
-    animation: flowin 0.3s ease-out forwards;
-
-    &:nth-of-type(1) {
-        animation-delay: 0.1s;
-    }
-
-    &:nth-of-type(2) {
-        animation-delay: 0.2s;
-    }
-
-    &:nth-of-type(3) {
-        animation-delay: 0.3s;
-    }
-
-    &:nth-of-type(4) {
-        animation-delay: 0.4s;
-    }
-
-    &:nth-of-type(5) {
-        animation-delay: 0.5s;
-    }
-
-    &:nth-of-type(6) {
-        animation-delay: 0.1s;
-    }
-
-    &:nth-of-type(7) {
-        animation-delay: 0.2s;
-    }
-
-    &:nth-of-type(8) {
-        animation-delay: 0.3s;
-    }
-
-    &:nth-of-type(9) {
-        animation-delay: 0.4s;
-    }
-
-    &:nth-of-type(10) {
-        animation-delay: 0.5s;
-    }
-
+    animation: flowin 0.4s ease-out forwards;
 }
 
 .dropdown-item a {
@@ -318,7 +283,7 @@ button {
 
 @keyframes flowin {
     from {
-        transform: translateY(50px);
+        transform: translateY(-20px);
         opacity: 0;
 
     }
@@ -351,13 +316,9 @@ form {
     border-radius: 10px;
     box-shadow: 0 4px 6px var(--v-box-shadow-color);
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-
-    @media (min-width: 1024px) {
-        flex-direction: row;
-        align-items: flex-start;
-    }
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .input-group {
@@ -366,11 +327,8 @@ form {
     gap: 15px;
     margin-bottom: 0;
     border: none;
-
-    @media (min-width: 1024px) {
-        flex: 1;
-        margin-bottom: 0;
-    }
+    width: 100%;
+    max-width: 400px;
 }
 
 .input-group label {
@@ -379,7 +337,7 @@ form {
     color: var(--primary-text-color);
 }
 
-.input-group textarea {
+textarea {
     padding: 12px 15px;
     font-size: var(--dynamic-font-size, 19px);
     font-family: 'Courier New', monospace;
@@ -387,8 +345,8 @@ form {
     border-radius: 6px;
     transition: border-color 0.3s ease, font-size 0.12s ease;
     resize: none;
-    min-height: 250px;
-    max-width: 400px;
+    width: 90%;
+    height: 200px;
 }
 
 .input-group textarea:focus {
@@ -396,16 +354,15 @@ form {
     border-color: var(--primary-color);
 }
 
-.output-group {
-    margin-top: 0;
-    padding-top: 0;
-    display: block;
 
-    @media (min-width: 1024px) {
-        flex: 1;
-        margin-top: 0;
-        padding-top: 0;
-    }
+
+.output-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    border: none;
+    width: 100%;
+    max-width: 400px;
 }
 
 .output-group label {
@@ -417,18 +374,24 @@ form {
 }
 
 .output-display {
-    padding: 20px;
-    background: #f5f7fa;
+    padding: 12px 15px;
+    font-size: var(--dynamic-font-size, 19px);
+    font-family: 'Courier New', monospace;
     border: 2px solid var(--v-border-color-dark);
     border-radius: 6px;
     font-family: 'Courier New', monospace;
     line-height: 1.6;
     animation: slideIn 0.4s ease;
+    background-color: #f5f5f5;
+}
+
+.output-display:focus {
+    outline: none;
+    border-color: var(--v-border-color-dark);
 }
 
 .error-message {
     padding: 15px;
-    background: #fee;
     border: 2px solid #fcc;
     border-radius: 6px;
     color: var(--limit-exceeded-color);
