@@ -103,6 +103,7 @@
     --player-settings-slider-background-color: rgba(67, 68, 78, 0.1);
     --player-settings-slider-foreground-color: rgba(67, 68, 78, 0.3);
     --player-bar-highlight-color: #EA6B24;
+    --limit-exceeded-color: #FF4136;
 
     --textsize-small: 14px;
     --textsize-medium: 20px;

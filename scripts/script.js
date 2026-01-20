@@ -21,9 +21,28 @@ window.addEventListener("click", (e) => {
 
 const asciiForm = document.querySelector(".ascii-form");
 const asciiInput = document.querySelector(".ascii-input");
+const textarea = document.querySelector("textarea");
+const result = document.querySelector(".counter");
 const outputContainer = document.querySelector(".output-container");
 const asciiOutput = document.querySelector(".ascii-output");
 const errorMessage = document.querySelector(".error-message");
+
+let limit = 250;
+result.textContent = 0 + "/" + limit;
+
+textarea.addEventListener("input",function(){
+    var textLength = textarea.value.length;
+    result.textContent = textLength + "/" + limit;
+
+    if(textLength > limit){
+        textarea.style.borderColor = "var(--limit-exceeded-color)";
+        result.style.color = "var(--limit-exceeded-color)";
+    }
+    else{
+        textarea.style.borderColor = "var(--v-border-color-dark)";
+        result.style.color = "var(--v-text-color-dark)";
+    }
+});
 
 asciiForm.addEventListener("submit", (e) => {
    e.preventDefault();
