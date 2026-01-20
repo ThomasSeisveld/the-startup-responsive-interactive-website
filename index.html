@@ -24,68 +24,73 @@
             <ul class="header-second">
                 <li>
                     <button role="button" class="dropdown" aria-label="Menu" aria-expanded="false">
-                        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path d="M5 17H19M5 12H19M5 7H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
+                            <path d="M5 17H19M5 12H19M5 7H19" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </button>
                 </li>
             </ul>
         </nav>
-         <section class="container">
+        <section class="container">
             <div class="wrapper">
-            <ul class="dropdown-menu">
-                <li class="dropdown-item">
-                    <a href="https://www.soundslice.com/login/" class="main-nav-item">Inloggen</a>
-                </li>
-                <li>
-                    <hr class="divider divider-20">
-                </li>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                        <a href="https://www.soundslice.com/login/" class="main-nav-item">Inloggen</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="https://www.soundslice.com/register/" class="main-nav-item">Sign up</a>
+                    </li>
+                    <li>
+                        <hr class="divider divider-20">
+                    </li>
 
-                <li class="dropdown-item">
-                    <a href="/features/" class="main-nav-item">The player</a>
-                </li>
-                <li class="dropdown-item">
-                    <a href="/notation-editor/" class="main-nav-item">Notation/tab editor</a>
-                </li>
-                <li class="dropdown-item">
-                    <a href="/sheet-music-scanner/" class="main-nav-item">
-                        Sheet music scanner
-                    </a>
-                </li>
-                <li>
-                    <hr class="divider divider-20">
-                </li>
-                <li class="dropdown-item">
-                    <a href="/music-practice/" class="main-nav-item">Practice</a>
-                </li>
-                <li class="dropdown-item">
-                    <a href="/licensing/" class="main-nav-item">Embedding</a>
-                </li>
-                <li class="dropdown-item">
-                    <a href="/teachers/" class="main-nav-item">Teaching</a>
-                </li>
-                <li class="dropdown-item">
-                    <a href="/transcribe/" class="main-nav-item">Transcribing</a>
-                </li>
-                <li class="dropdown-item">
-                    <a href="/plans/" class="main-nav-item">Plans</a>
-                </li>
-                <li>
-                    <hr class="divider divider-20">
-                </li>
-                <li class="dropdown-item">
-                    <a href="/blog/" class="main-nav-item">Product updates</a>
-                </li>
-                <li class="dropdown-item">
-                    <a href="/help/" class="main-nav-item">Help center</a>
-                </li>
-                <li class="dropdown-item">
-                    <a href="/about/" class="main-nav-item">Over</a>
-                </li>
-            </ul>
+                    <li class="dropdown-item">
+                        <a href="/features/" class="main-nav-item">The player</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="/notation-editor/" class="main-nav-item">Notation/tab editor</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="/sheet-music-scanner/" class="main-nav-item">
+                            Sheet music scanner
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="divider divider-20">
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="/music-practice/" class="main-nav-item">Practice</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="/licensing/" class="main-nav-item">Embedding</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="/teachers/" class="main-nav-item">Teaching</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="/transcribe/" class="main-nav-item">Transcribing</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="/plans/" class="main-nav-item">Plans</a>
+                    </li>
+                    <li>
+                        <hr class="divider divider-20">
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="/blog/" class="main-nav-item">Product updates</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="/help/" class="main-nav-item">Help center</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="/about/" class="main-nav-item">Over</a>
+                    </li>
+                </ul>
             </div>
         </section>
-       
+
         <nav class="main-nav-desktop">
             <ul class="header-first">
                 <div class="header-logo">
@@ -110,17 +115,26 @@
             <p class="hero-text">Soundslice is a platform that converts your ASCII into readable sheet music.</p>
         </section>
 
-        <form action="convert" method="POST">
-            <label for="ascii" input="text">ASCII Input:</label>
-            <textarea name="ascii" rows="10" cols="30" placeholder="Enter ASCII text here..."></textarea>
-            <button type="submit">Convert</button>
-        </form>
+        <section class="ascii-converter">
+            <form class="converter-container ascii-form">
+                <fieldset class="input-group">
+                    <label for="ascii-input" input="text">ASCII Input:</label>
+                    <textarea class="ascii-input" name="ascii-input" placeholder="--0--3--1--0--|---------|---------
+--1-----1-----|-1-0-----|-----1---
+--0-----2-----|-----2-0-|---------
+--2-----3-----|---------|---2-----
+--3-----3-----|---------|-3-----3-
+--------------|---------|---------" rows="6" required></textarea>
+                    <button type="submit" class="convert-button">Convert</button>
+                </fieldset>
 
-        <output action="output">
-            <label for="output">Output:</label>
-            <textarea name="output" id="output" rows="10" cols="30" placeholder="Converted sheet music"></textarea>
-            <iframe src="" frameborder="0"></iframe>
-        </output>
+                <output class="output-container output-group" style="display: none;">
+                    <label>Sheet Music:</label>
+                    <div class="ascii-output output-display"></div>
+                </output>
+                <div class="error-message" style="display: none;"></div>
+            </form>
+        </section>
 
         <footer>
             <p>&copy; 2025 Soundslice</p>

@@ -18,3 +18,27 @@ window.addEventListener("click", (e) => {
       }
    }
 });
+
+const asciiForm = document.querySelector(".ascii-form");
+const asciiInput = document.querySelector(".ascii-input");
+const outputContainer = document.querySelector(".output-container");
+const asciiOutput = document.querySelector(".ascii-output");
+const errorMessage = document.querySelector(".error-message");
+
+asciiForm.addEventListener("submit", (e) => {
+   e.preventDefault();
+   convertASCII();
+});
+
+function convertASCII() {
+   const tabInput = asciiInput.value.trim();
+   asciiOutput.textContent = tabInput;
+   outputContainer.style.display = "block";
+   errorMessage.style.display = "none";
+}
+
+function showError(message) {
+   errorMessage.textContent = message;
+   errorMessage.style.display = "block";
+   outputContainer.style.display = "none";
+}

@@ -75,8 +75,8 @@
     --v-foreground-color-rgb: 67, 68, 78;
     --v-foreground-color-light: #808080;
     --v-border-color: rgba(67, 68, 78, 0.1);
-    --v-border-color-dark: rgba(67, 68, 78, 0.2);
-    --v-boxshadow-color: rgba(67, 68, 78, 0.1);
+    --v-border-color-dark: rgba(67, 68, 78, 0.5);
+    --v-boxshadow-color: rgba(67, 68, 78, 0.2);
     --v-logo-color: #60516E;
     --v-background-color-light: #FAF8F5;
     --v-background-color-light-rgb: 250, 248, 245;
