@@ -13,7 +13,7 @@ dropdown.addEventListener("click", () => {
 window.addEventListener("click", (e) => {
    if (!e.target.closest(".dropdown") && !e.target.closest(".dropdown-menu")) {
       if (wrapper.classList.contains("is-active")) {
-         dropdown.classList.toggle("is-active");
+         dropdown.classList.remove("is-active");
          wrapper.classList.remove("is-active");
       }
    }
