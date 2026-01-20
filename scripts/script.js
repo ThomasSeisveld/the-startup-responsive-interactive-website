@@ -28,12 +28,13 @@ const result = document.querySelector(".counter");
 const outputContainer = document.querySelector(".output-container");
 const asciiOutput = document.querySelector(".ascii-output");
 const errorMessage = document.querySelector(".error-message");
+const convertButton = document.querySelector(".convert-button");
 
 let limit = 500;
 result.textContent = 0 + "/" + limit;
 
 function updateFontSize() {
-   var textLength = textarea.value.length;
+   let textLength = textarea.value.length;
    const maxSize = 20;
    const minSize = 14;
    const maxChars = limit;
@@ -43,18 +44,20 @@ function updateFontSize() {
 }
 
 textarea.addEventListener("input", function () {
-   var textLength = textarea.value.length;
+   let textLength = textarea.value.length;
    result.textContent = textLength + "/" + limit;
    updateFontSize();
    
    if (textLength > limit) {
       textarea.style.borderColor = "var(--limit-exceeded-color)";
       result.style.color = "var(--limit-exceeded-color)";
+      convertButton.disabled = true;
       showError("Character limit exceeded!");
    }
    else {
       textarea.style.borderColor = "var(--v-border-color-dark)";
       result.style.color = "var(--v-text-color-dark)";
+      convertButton.disabled = false;
       errorMessage.style.display = "none";
    }
 });
