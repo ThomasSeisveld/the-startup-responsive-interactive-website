@@ -42,6 +42,7 @@ textarea.addEventListener("input",function(){
     else{
         textarea.style.borderColor = "var(--v-border-color-dark)";
         result.style.color = "var(--v-text-color-dark)";
+        errorMessage.style.display = "none";
     }
 });
 
