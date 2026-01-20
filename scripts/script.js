@@ -1,3 +1,4 @@
+// Dropdown menu script
 const dropdown = document.querySelector(".dropdown");
 const wrapper = document.querySelector(".wrapper");
 
@@ -19,6 +20,7 @@ window.addEventListener("click", (e) => {
    }
 });
 
+// convert ASCII script
 const asciiForm = document.querySelector(".ascii-form");
 const asciiInput = document.querySelector(".ascii-input");
 const textarea = document.querySelector("textarea");
@@ -27,24 +29,38 @@ const outputContainer = document.querySelector(".output-container");
 const asciiOutput = document.querySelector(".ascii-output");
 const errorMessage = document.querySelector(".error-message");
 
-let limit = 250;
+let limit = 500;
 result.textContent = 0 + "/" + limit;
 
-textarea.addEventListener("input",function(){
-    var textLength = textarea.value.length;
-    result.textContent = textLength + "/" + limit;
+function updateFontSize() {
+   var textLength = textarea.value.length;
+   const maxSize = 20;
+   const minSize = 14;
+   const maxChars = limit;
+   const ratio = Math.min(textLength / maxChars, 1);
+   const size = Math.round(maxSize - (maxSize - minSize) * ratio);
+   textarea.style.setProperty('--dynamic-font-size', size + 'px');
+}
 
-    if(textLength > limit){
-        textarea.style.borderColor = "var(--limit-exceeded-color)";
-        result.style.color = "var(--limit-exceeded-color)";
-        showError("Character limit exceeded!");
-    }
-    else{
-        textarea.style.borderColor = "var(--v-border-color-dark)";
-        result.style.color = "var(--v-text-color-dark)";
-        errorMessage.style.display = "none";
-    }
+textarea.addEventListener("input", function () {
+   var textLength = textarea.value.length;
+   result.textContent = textLength + "/" + limit;
+   updateFontSize();
+   
+   if (textLength > limit) {
+      textarea.style.borderColor = "var(--limit-exceeded-color)";
+      result.style.color = "var(--limit-exceeded-color)";
+      showError("Character limit exceeded!");
+   }
+   else {
+      textarea.style.borderColor = "var(--v-border-color-dark)";
+      result.style.color = "var(--v-text-color-dark)";
+      errorMessage.style.display = "none";
+   }
 });
+
+window.addEventListener("resize", updateFontSize);
+
 
 asciiForm.addEventListener("submit", (e) => {
    e.preventDefault();
