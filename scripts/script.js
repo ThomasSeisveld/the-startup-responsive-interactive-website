@@ -37,6 +37,7 @@ textarea.addEventListener("input",function(){
     if(textLength > limit){
         textarea.style.borderColor = "var(--limit-exceeded-color)";
         result.style.color = "var(--limit-exceeded-color)";
+        showError("Character limit exceeded!");
     }
     else{
         textarea.style.borderColor = "var(--v-border-color-dark)";

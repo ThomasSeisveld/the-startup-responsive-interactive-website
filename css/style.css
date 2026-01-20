@@ -379,7 +379,6 @@ form {
 .output-group {
     margin-top: 30px;
     padding-top: 30px;
-    border-top: 2px solid #e0e0e0;
     display: block;
 }
 
@@ -406,9 +405,8 @@ form {
     background: #fee;
     border: 2px solid #fcc;
     border-radius: 6px;
-    color: #c33;
+    color: var(--limit-exceeded-color);
     font-weight: 600;
-    margin-top: 15px;
     animation: slideIn 0.4s ease;
 }
 
