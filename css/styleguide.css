@@ -143,8 +143,10 @@ iframe::-webkit-scrollbar-thumb:hover {
     --player-bar-highlight-color: #EA6B24;
     --limit-exceeded-color: #FF4136;
 
+    --dinamic-font-size: 16px;
+
     --textsize-small: 14px;
-    --textsize-medium: 20px;
+    --textsize-medium: 16px;
     --textsize-large: 36px;
     --textsize-xlarge: 52px;
 }

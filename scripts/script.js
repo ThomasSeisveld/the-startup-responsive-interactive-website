@@ -36,7 +36,7 @@ result.textContent = 0 + "/" + limit;
 function updateFontSize() {
    let textLength = textarea.value.length;
    const maxSize = 20;
-   const minSize = 14;
+   const minSize = 10;
    const maxChars = limit;
    const ratio = Math.min(textLength / maxChars, 1);
    const size = Math.round(maxSize - (maxSize - minSize) * ratio);

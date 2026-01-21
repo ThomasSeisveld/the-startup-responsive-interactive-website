@@ -366,14 +366,34 @@ form {
     flex-wrap: wrap;
 }
 
+textarea {
+    padding: 12px 15px;
+    font-size: var(--textsize-medium);
+    font-family: 'Courier New', monospace;
+    border: 2px solid var(--v-border-color-dark);
+    border-radius: 6px;
+    transition: border-color 0.5s ease, font-size 0.12s ease;
+    resize: none;
+    max-width: 400px;
+    height: 200px;
+}
+
 .input-group {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-bottom: 0;
     border: none;
     width: 100%;
     max-width: 400px;
+
+    & textarea {
+        font-size: var(--dynamic-font-size, 16px);
+        height: auto;
+        width: 100%;
+        max-width: 400px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
 }
 
 .input-group label {
@@ -382,24 +402,14 @@ form {
     color: var(--primary-text-color);
 }
 
-textarea {
-    padding: 12px 15px;
-    font-size: var(--dynamic-font-size, 19px);
-    font-family: 'Courier New', monospace;
-    border: 2px solid var(--v-border-color-dark);
-    border-radius: 6px;
-    transition: border-color 0.5s ease, font-size 0.12s ease;
-    resize: none;
-    width: 90%;
-    height: 200px;
-}
-
 input[type="text"] {
-    padding: 10px 15px;
+    padding: 12px 15px;
     border: 2px solid var(--v-border-color-dark);
     border-radius: 6px;
     transition: border-color 0.5s ease;
-    width: 90%;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
 }
 
 .input-group textarea:focus {
@@ -417,21 +427,27 @@ input[type="text"]:focus {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-bottom: 0;
     border: none;
     width: 100%;
     max-width: 400px;
 
     & textarea {
+        font-size: var(--textsize-medium);
         height: auto;
+        width: 100%;
+        max-width: 400px;
+        padding: 10px;
+        box-sizing: border-box;
     }
 
     & iframe {
-        width: 390px;
         border-radius: 6px;
         border: 2px solid var(--v-border-color-dark);
         transform: scale(1);
-        transform-origin: top left;
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        transition: border-color 0.5s ease, transform 0.2s ease
     }
 }
 
@@ -444,7 +460,9 @@ input[type="text"]:focus {
 }
 
 .output-display {
-    padding: 12px 15px;
+    padding: 12px;
+    width: 100%;
+    max-width: 400px;
     font-size: var(--dynamic-font-size, 19px);
     font-family: 'Courier New', monospace;
     border: 2px solid var(--v-border-color-dark);
@@ -452,7 +470,6 @@ input[type="text"]:focus {
     font-family: 'Courier New', monospace;
     line-height: 1.6;
     animation: slideIn 0.4s ease;
-    background-color: #f5f5f5;
 }
 
 .output-display:focus {
@@ -478,15 +495,5 @@ input[type="text"]:focus {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@media (max-width: 600px) {
-    .converter-container {
-        padding: 20px;
-    }
-
-    .output-display {
-        font-size: 12px;
     }
 }
