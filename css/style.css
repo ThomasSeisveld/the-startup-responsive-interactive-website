@@ -421,7 +421,7 @@ input[type="text"]:focus {
 
     & textarea {
         font-size: var(--textsize-medium);
-        background: rgb(179, 179, 179);
+        background: rgba(189, 189, 189, 0.788);
         height: 60px;
         width: 100%;
         max-width: 400px;
