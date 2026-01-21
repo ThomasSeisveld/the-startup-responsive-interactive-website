@@ -17,6 +17,7 @@
     font-family: proxima-nova-2;
     src: url(../assets/fonts/semibold-subset.woff2);
 }
+
 /* @font-face {
     font-family: "freight-text-pro";
     src: url("../fonts/freight/2CDFA8_2_0-c2ac893f0bf35c631294741d02dad2b7.woff2") format("woff2"), url("../fonts/freight/2CDFA8_2_0-f5855381dc159f35ba6c65eafb05fe50.woff") format("woff");
@@ -63,11 +64,48 @@
     font-style: normal
 } */
 
+
+::-webkit-scrollbar {
+    width: 10px;
+    pointer-events: all;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--v-scrollbar-track-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--active-color);
+}
+
+iframe::-webkit-scrollbar {
+    width: 10px;
+    pointer-events: all;
+}
+
+iframe::-webkit-scrollbar-track {
+    background: var(--v-scrollbar-track-color);
+}
+
+iframe::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+iframe::-webkit-scrollbar-thumb:hover {
+    background: var(--active-color);
+}
+
 :root {
     --default-white: #ffffff;
     --primary-color: #f2725f;
     --primary-text-color: #43444e;
-    --active-color: rgb(240.0838150289,93.2167630058,71.4161849711);
+    --active-color: rgb(240.0838150289, 93.2167630058, 71.4161849711);
 
     --v-background-color: white;
     --v-background-color-rgb: 255, 255, 255;
