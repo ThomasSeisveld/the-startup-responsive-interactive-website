@@ -126,7 +126,7 @@ button {
 
 .main-header {
     height: 3rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .main-nav-mobile {
@@ -278,7 +278,7 @@ button {
     display: block;
 
     .divider {
-        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        border-top: 1px solid rgba(0, 0, 0, 0.3);
         animation: flowin 0.4s ease-out forwards;
     }
 }
@@ -324,20 +324,6 @@ button {
     @media (min-width: 400px) {
         position: absolute;
     }
-}
-
-@keyframes flowin {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-
-    }
-
-    to {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-
 }
 
 section {
@@ -387,8 +373,8 @@ textarea {
     max-width: 400px;
 
     & textarea {
-        font-size: var(--dynamic-font-size, 16px);
-        height: auto;
+        font-size: var(--dynamic-font-size, 18px);
+        height: 190px;
         width: 100%;
         max-width: 400px;
         padding: 10px;
@@ -408,6 +394,7 @@ input[type="text"] {
     border-radius: 6px;
     transition: border-color 0.5s ease;
     width: 100%;
+    height: 40px;
     max-width: 400px;
     box-sizing: border-box;
 }
@@ -430,10 +417,12 @@ input[type="text"]:focus {
     border: none;
     width: 100%;
     max-width: 400px;
+    animation: slideIn 0.4s ease;
 
     & textarea {
         font-size: var(--textsize-medium);
-        height: auto;
+        background: rgb(179, 179, 179);
+        height: 60px;
         width: 100%;
         max-width: 400px;
         padding: 10px;
@@ -469,7 +458,6 @@ input[type="text"]:focus {
     border-radius: 6px;
     font-family: 'Courier New', monospace;
     line-height: 1.6;
-    animation: slideIn 0.4s ease;
 }
 
 .output-display:focus {
@@ -484,6 +472,65 @@ input[type="text"]:focus {
     color: var(--limit-exceeded-color);
     font-weight: 600;
     animation: slideIn 0.4s ease;
+}
+
+footer {
+    display: flex;
+    color: var(--primary-text-color);
+    margin: 8px;
+    width: 95vw;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: 50px;
+
+    a {
+        text-decoration: none;
+        color: grey;
+        transition: all .15s;
+    }
+
+    a:hover {
+        color: var(--color-active);
+    }
+
+    @media screen and (max-width: 500px) {
+        flex-direction: column;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        line-height: 25px;
+
+        p {
+            color: var(--color-secondary);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+            margin-bottom: 5px;
+        }
+    }
+}
+
+p5 {
+    font-size: 14px;
+    color: var(--v-foreground-color-light);
+}
+
+@keyframes flowin {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
 }
 
 @keyframes slideIn {

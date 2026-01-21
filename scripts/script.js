@@ -36,11 +36,16 @@ result.textContent = 0 + "/" + limit;
 function updateFontSize() {
    let textLength = textarea.value.length;
    const maxSize = 20;
-   const minSize = 10;
+   const minSize = 11;
    const maxChars = limit;
    const ratio = Math.min(textLength / maxChars, 1);
    const size = Math.round(maxSize - (maxSize - minSize) * ratio);
    textarea.style.setProperty('--dynamic-font-size', size + 'px');
+
+   if (textLength === 0 || textLength === null) {
+      textarea.style.setProperty('--dynamic-font-size', '18px');
+      textarea.placeholder = "Enter ASCII text here...";
+   }
 }
 
 
