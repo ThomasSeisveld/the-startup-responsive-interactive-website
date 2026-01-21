@@ -190,6 +190,18 @@ button {
         }
     }
 
+    li {
+            list-style: none;
+            cursor: pointer;
+
+            &:hover {
+                background: var(--default-white);
+                box-shadow: 0 4px 12px var(--v-box-shadow-color);
+                color: var(--primary-color);
+                transform: translateY(-1px);
+            }
+        }
+
     .header-logo {
         display: flex;
         align-items: center;
@@ -198,8 +210,12 @@ button {
         p {
             margin: 0;
             font-size: 18px;
-
         }
+    }
+
+    .header-middle {
+        gap: 11px;
+        align-items: center;
     }
 
     @media (max-width: 700px) {
