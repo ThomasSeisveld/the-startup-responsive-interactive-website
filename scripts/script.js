@@ -64,7 +64,7 @@ textarea.addEventListener("input", function () {
       textarea.style.borderColor = "var(--v-border-color-dark)";
       result.style.color = "var(--v-text-color-dark)";
       convertButton.disabled = false;
-      errorMessage.style.display = "none";
+      errorMessage.hidden = true;
    }
 });
 
@@ -75,14 +75,14 @@ convertButton.addEventListener("click", function(e) {
 
 
 function convertASCII() {
-   const tabInput = asciiInput.value.trim();
-   asciiOutput.textContent = tabInput;
-   outputContainer.style.display = "block";
-   errorMessage.style.display = "none";
+   // const tabInput = asciiInput.value.trim();
+   // asciiOutput.textContent = tabInput;
+   outputContainer.hidden = false;
+   errorMessage.hidden = true;
 }
 
 function showError(message) {
    errorMessage.textContent = message;
-   errorMessage.style.display = "block";
-   outputContainer.style.display = "none";
+   errorMessage.hidden = false;
+   outputContainer.hidden = true;
 }
