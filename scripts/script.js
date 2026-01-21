@@ -69,8 +69,8 @@ textarea.addEventListener("input", function () {
 });
 
 convertButton.addEventListener("click", function(e) {
-   e.preventDefault();
    convertASCII();
+   e.preventDefault();
 });
 
 
