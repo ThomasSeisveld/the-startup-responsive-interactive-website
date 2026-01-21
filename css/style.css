@@ -516,6 +516,7 @@ footer {
 
 p5 {
     font-size: 14px;
+    padding: 5px;
     color: var(--v-foreground-color-light);
 }
 
