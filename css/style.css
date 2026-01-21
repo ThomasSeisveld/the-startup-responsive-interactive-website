@@ -420,6 +420,7 @@ input[type="text"]:focus {
     max-width: 400px;
     animation: slideIn 0.4s ease;
 
+
     & textarea {
         font-size: var(--textsize-medium);
         background: rgba(189, 189, 189, 0.788);
@@ -441,6 +442,9 @@ input[type="text"]:focus {
     }
 }
 
+.output-container[hidden] {
+    display: none;
+}
 
 .output-group label {
     font-size: 18px;
@@ -473,6 +477,11 @@ input[type="text"]:focus {
     color: var(--limit-exceeded-color);
     font-weight: 600;
     animation: slideIn 0.4s ease;
+}
+
+.error-message[hidden] {
+    display: none;
+
 }
 
 footer {
