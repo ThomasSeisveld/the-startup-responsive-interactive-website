@@ -137,6 +137,11 @@ button {
     margin-top: 10px;
     margin-bottom: 10px;
 
+    li {
+        list-style: none;
+        cursor: pointer;
+    }
+
     ul {
         display: flex;
         align-items: center;
@@ -191,16 +196,16 @@ button {
     }
 
     li {
-            list-style: none;
-            cursor: pointer;
+        list-style: none;
+        cursor: pointer;
 
-            &:hover {
-                background: var(--default-white);
-                box-shadow: 0 4px 12px var(--v-box-shadow-color);
-                color: var(--primary-color);
-                transform: translateY(-1px);
-            }
+        &:hover {
+            background: var(--default-white);
+            box-shadow: 0 4px 12px var(--v-box-shadow-color);
+            color: var(--primary-color);
+            transform: translateY(-1px);
         }
+    }
 
     .header-logo {
         display: flex;
