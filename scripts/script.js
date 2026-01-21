@@ -53,7 +53,7 @@ textarea.addEventListener("input", function () {
       textarea.style.borderColor = "var(--limit-exceeded-color)";
       result.style.color = "var(--limit-exceeded-color)";
       convertButton.disabled = true;
-      showError("Character limit exceeded!");
+      showError(textarea.dataset.errorMsg);
    }
    else {
       textarea.style.borderColor = "var(--v-border-color-dark)";
