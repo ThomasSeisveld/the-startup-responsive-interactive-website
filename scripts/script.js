@@ -69,9 +69,6 @@ convertButton.addEventListener("click", function(e) {
 });
 
 
-
-window.addEventListener("resize", updateFontSize);
-
 function convertASCII() {
    const tabInput = asciiInput.value.trim();
    asciiOutput.textContent = tabInput;
