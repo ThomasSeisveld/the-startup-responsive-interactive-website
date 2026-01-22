@@ -19,6 +19,7 @@ gemaakt met HTML, CSS en JavaScript.
 ## pictures
 Desktop view:
 ![alt text](assets/svg/fthfhtfht.png)
+
 Mobile view:
 ![alt text](assets/svg/imagefhtfhtfthfth.png)
 
