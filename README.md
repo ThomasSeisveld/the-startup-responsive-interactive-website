@@ -7,7 +7,7 @@ Soundslice ASCCII converter.
 
 
 ## Beschrijving
-Een website die ascii tekst converteert naar een riff sheet.
+Een website die ascii tekst converteert naar een music sheet.
 
 ## Kenmerken
 - Responsive design
