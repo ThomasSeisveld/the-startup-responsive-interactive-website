@@ -171,6 +171,15 @@ button {
             font-size: 18px;
             color: var(--color-secondary);
         }
+
+        .mark {
+            background-color: var(--highlight-color);
+            font-size: 12px;
+            border-radius: 4px;
+            color: var(--primary-color);
+            padding: 1px 3px;
+            margin: -11px 0 0 0;
+        }
     }
 
     @media (min-width: 700px) {
@@ -207,6 +216,7 @@ button {
         }
     }
 
+    
     .header-logo {
         display: flex;
         align-items: center;
@@ -215,9 +225,18 @@ button {
         p {
             margin: 0;
             font-size: 18px;
+            color: var(--color-secondary);
+        }
+
+        .mark {
+            background-color: var(--highlight-color);
+            font-size: 12px;
+            border-radius: 4px;
+            color: var(--primary-color);
+            padding: 1px 3px;
+            margin: -11px 0 0 0;
         }
     }
-
     .header-middle {
         gap: 11px;
         align-items: center;
@@ -529,6 +548,7 @@ p5 {
     padding: 5px;
     color: var(--v-foreground-color-light);
 }
+
 
 @keyframes flowin {
     from {

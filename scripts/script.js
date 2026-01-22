@@ -29,6 +29,7 @@ const outputContainer = document.querySelector(".output-container");
 const asciiOutput = document.querySelector(".ascii-output");
 const errorMessage = document.querySelector(".error-message");
 const convertButton = document.querySelector(".convert-button");
+const saveButton = document.querySelector(".save-button");
 
 let limit = 500;
 result.textContent = 0 + "/" + limit;
@@ -73,6 +74,10 @@ convertButton.addEventListener("click", function(e) {
    e.preventDefault();
 });
 
+saveButton.addEventListener("click", function(e) {
+   showError("Not implemented yet!");
+   e.preventDefault();
+});
 
 function convertASCII() {
    // const tabInput = asciiInput.value.trim();
