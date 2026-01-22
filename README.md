@@ -3,17 +3,24 @@ Ontwerp en maak een responsive website voor een startup.
 De instructies voor deze opdracht staan in: [INSTRUCTIONS.md](https://github.com/fdnd-task/the-startup-responsive-interactieve-website/blob/main/docs/INSTRUCTIONS.md)
 
 # Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+Soundslice ASCCII converter.
+
 
 ## Beschrijving
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+Een website die ascii tekst converteert naar een riff sheet.
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? -->
+- Responsive design
+- Interactieve elementen
+- Gebruiksvriendelijke interface
 
-## Bronnen
+gemaakt met HTML, CSS en JavaScript.
+
+## pictures
+Desktop view:
+![alt text](assets/svg/fthfhtfht.png)
+Mobile view:
+![alt text](assets/svg/imagefhtfhtfthfth.png)
 
 ## Licentie
 
